@@ -174,9 +174,16 @@ function convertToUpperCase(str) {
  *   ],
  *   'info@gmail.com' => ['info@gmail.com']
  */
-function extractEmails(/* str */) {
-  throw new Error('Not implemented');
+function extractEmails(str) {
+  const arr = [];
+  const newstr = str.split(';');
+  // eslint-disable-next-line no-restricted-syntax
+  for (const i of newstr) {
+    arr.push(i);
+  }
+  return arr;
 }
+
 
 /**
  * Returns the string representation of rectangle with specified width and height
